@@ -1,0 +1,17 @@
+{
+  "name": "Project2",
+  "version": "1.0.0",
+  "main": "1_hackrankAutomation.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "minimist": "^1.2.5",
+    "puppeteer": "^13.0.0"
+  },
+  "devDependencies": {},
+  "description": ""
+}

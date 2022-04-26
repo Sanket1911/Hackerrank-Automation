@@ -1,0 +1,18 @@
+
+
+Scanner sc=new Scanner(System.in);
+		int t=sc.nextInt();
+		while(t!=0){
+		    int N=sc.nextInt();
+		    int B[][]=new int[3][3];
+		    for(int i=0;i<3;++i){ //Number of buckets
+		        for(int j=0;j<3;++j){ //Number of balls
+		            B[j][i]=sc.nextInt();
+		        }
+		    }
+		    int farthestDiagonalMax=Math.max(B[0][1]+B[2][0],B[0][2]+B[2][1]);
+		    int smallestDiagonalMax=Math.max(B[0][1]+B[1][0],Math.max(B[0][2]+B[2][0],Math.max(B[1][2]+B[2][1],Math.max(B[0][1]+B[1][2],B[1][0]+B[2][1]))));
+		    int ans=isSymmetric(B)?(B[1][0]+B[2][0]+B[1][2]):(Math.max(farthestDiagonalMax,smallestDiagonalMax));
+		    System.out.println(ans);
+		    t--;
+		}
